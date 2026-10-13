@@ -116,7 +116,7 @@ input[type='range']::-moz-range-thumb { width: 9px; height: 9px; border-radius: 
 .model-label.left { flex-direction: row-reverse; }
 .model-label.left::after { order: 2; }
 .model-label strong { font-weight: 500; color: var(--orange); }
-.model-detail { position: absolute; z-index: 3; left: 29px; bottom: 60px; display: flex; gap: 16px; align-items: start; max-width: 390px; pointer-events: none; }
+.model-detail { position: absolute; z-index: 3; left: 29px; bottom: 64px; display: flex; gap: 16px; align-items: start; max-width: 342px; padding: 13px 15px; border-left: 2px solid var(--orange); background: rgba(247,243,236,.85); backdrop-filter: blur(8px); pointer-events: none; }
 .detail-count { color: var(--orange); font: 9px var(--mono); padding-top: 6px; }
 .detail-kicker { color: var(--muted); font: 9px var(--mono); letter-spacing: .08em; }
 .model-detail h3 { margin: 5px 0 6px; font: 500 23px var(--serif); letter-spacing: -.03em; }
@@ -188,7 +188,9 @@ input[type='range']::-moz-range-thumb { width: 9px; height: 9px; border-radius: 
   .viewer { min-height: 560px; }
   .viewer-header { left: 16px; right: 16px; }
   .mode-switch { transform: scale(.88); transform-origin: right top; }
-  .model-detail { left: 16px; bottom: 67px; }
+  .model-detail { left: 16px; bottom: 62px; max-width: 260px; gap: 9px; padding: 9px 11px; }
+  .model-detail h3 { font-size: 18px; }
+  .model-detail p { font-size: 9px; }
   .viewer-bottom { left: 16px; right: 16px; }
   .interaction-hint { font-size: 8px; }
   .camera-actions button { padding: 6px 7px; }
