@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f2ed" />
+    <meta name="description" content="交互式探索北京国家体育场的钢结构、屋盖、看台、环廊、场地和基础。" />
+    <title>鸟巢结构馆 | 北京国家体育场三维漫游</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="鸟巢结构馆首页">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-name">鸟巢<span>结构馆</span></span>
+        </a>
+        <nav class="top-nav" aria-label="主导航">
+          <a class="active" href="#explore">结构漫游</a>
+          <a href="#story">建筑解读</a>
+          <a href="#sources">资料来源</a>
+        </nav>
+        <span class="header-note"><span class="live-dot"></span> 北京 · 国家体育场</span>
+      </header>
+
+      <main id="top">
+        <section class="intro" aria-labelledby="hero-title">
+          <div class="intro-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> THE NATIONAL STADIUM · BEIJING</div>
+            <h1 id="hero-title">一座场馆，<br /><em>层层可见。</em></h1>
+            <p>从交错的钢构到层叠的看台。转动模型，拆开结构，换一个角度理解“鸟巢”。</p>
+          </div>
+          <div class="intro-aside">
+            <span class="intro-index">01 / 03</span>
+            <span class="intro-aside-text">建筑结构的<br />交互式观察笔记</span>
+            <span class="intro-rule"></span>
+          </div>
+        </section>
+
+        <section class="experience" id="explore" aria-label="鸟巢三维结构探索">
+          <aside class="layer-panel">
+            <div class="panel-topline"><span>STRUCTURE INDEX</span><span>六层结构</span></div>
+            <h2>由外至内，<br /><span>逐层探索。</span></h2>
+            <p class="panel-lede">点击构件查看说明；使用右侧按钮显示或隐藏该层。</p>
+            <div class="layer-list" id="layer-list" aria-label="结构层列表"></div>
+            <div class="panel-bottom">
+              <div class="slider-heading"><label for="explode-range">结构拆解距离</label><output id="explode-value">0%</output></div>
+              <input id="explode-range" type="range" min="0" max="100" value="0" aria-label="结构拆解距离" />
+              <div class="slider-ends"><span>组合</span><span>分层</span></div>
+              <button class="restore-button" id="restore-button" type="button"><span aria-hidden="true">↺</span> 恢复完整模型</button>
+            </div>
+          </aside>
+
+          <div class="viewer" id="viewer">
+            <div class="viewer-gradient" aria-hidden="true"></div>
+            <div class="viewer-header">
+              <div class="viewer-identity"><span class="viewer-small">INTERACTIVE MODEL</span><strong>北京国家体育场</strong></div>
+              <div class="mode-switch" role="group" aria-label="查看模式">
+                <button type="button" class="mode-button active" data-mode="whole" aria-pressed="true">整体</button>
+                <button type="button" class="mode-button" data-mode="explode" aria-pressed="false">拆解</button>
+                <button type="button" class="mode-button" data-mode="section" aria-pressed="false">剖切</button>
+              </div>
+            </div>
+            <div class="canvas-wrap" id="canvas-wrap">
+              <div id="scene" role="img" aria-label="可旋转的北京国家体育场三维结构示意模型"></div>
+              <div class="model-labels" id="model-labels" aria-hidden="true"></div>
+              <div class="loading" id="loading">模型加载中…</div>
+            </div>
+            <div class="model-detail" id="model-detail" aria-live="polite">
+              <span class="detail-count" id="detail-count">01 / 06</span>
+              <div><span class="detail-kicker" id="detail-kicker">ROOF</span><h3 id="detail-title">屋盖与开口</h3><p id="detail-description">外缘的钢结构围合出开放的椭圆形屋面，中部保留大面积开口。</p></div>
+            </div>
+            <div class="viewer-bottom">
+              <span class="interaction-hint"><span class="hint-icon" aria-hidden="true">◎</span> 拖动旋转 · 滚轮缩放 · 点击构件</span>
+              <div class="camera-actions">
+                <button type="button" id="top-view" aria-label="切换俯视视角" title="俯视视角">俯视</button>
+                <button type="button" id="reset-view" aria-label="重置视角" title="重置视角">重置视角</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="story" id="story" aria-labelledby="story-title">
+          <div class="section-heading">
+            <div><span class="section-number">02 / 建筑解读</span><h2 id="story-title">秩序藏在交织之中。</h2></div>
+            <p>这是一个用于理解结构关系的交互式示意模型，并非施工图或精确工程复原。</p>
+          </div>
+          <div class="story-grid">
+            <article class="story-card">
+              <span class="story-card-number">01</span><span class="story-glyph weave" aria-hidden="true"></span>
+              <h3>钢构与看台各有角色</h3>
+              <p>外部交织的钢结构塑造建筑轮廓；内部的混凝土看台形成观赛空间。切换结构层，可分别观察两套体系。</p>
+            </article>
+            <article class="story-card">
+              <span class="story-card-number">02</span><span class="story-glyph oval" aria-hidden="true"></span>
+              <h3>开放屋盖与环形动线</h3>
+              <p>屋盖围绕椭圆形开口展开。看台之外，环形通道组织人流，让场馆内外形成连续的空间关系。</p>
+            </article>
+            <article class="story-card">
+              <span class="story-card-number">03</span><span class="story-glyph layers" aria-hidden="true"></span>
+              <h3>用剖切看清空间层次</h3>
+              <p>把相互遮挡的部分暂时移开，便能看到地基、场地、环廊、看台、外立面与屋盖的相对位置。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="source-strip" id="sources">
+          <div><span class="section-number">03 / 资料来源</span><h2>继续了解这座建筑</h2></div>
+          <div class="source-links">
+            <a href="https://www.arup.com/projects/chinese-national-stadium/" target="_blank" rel="noopener noreferrer">Arup · 结构工程介绍 <span>↗</span></a>
+            <a href="https://www.herzogdemeuron.com/projects/226-national-stadium/" target="_blank" rel="noopener noreferrer">Herzog &amp; de Meuron · 项目资料 <span>↗</span></a>
+            <a href="https://cadg.com.cn/en/works/549/" target="_blank" rel="noopener noreferrer">中国建筑设计研究院 · 项目资料 <span>↗</span></a>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"><span>鸟巢结构馆 © 2026</span><span>独立制作的建筑学习示意 · 非官方工程模型</span><a href="#top">返回顶部 ↑</a></footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
