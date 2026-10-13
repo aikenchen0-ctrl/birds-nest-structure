@@ -250,8 +250,9 @@ const updateTargets = () => {
 const updateCamera = () => {
   root.rotation.y += (yaw - root.rotation.y) * .12;
   root.rotation.x += (pitchAngle - root.rotation.x) * .12;
-  const distance = 15.4 / zoom;
-  camera.position.set(Math.sin(.85) * distance, 6.3 / zoom, Math.cos(.85) * distance);
+  const fit = Math.max(1, (0.86 / camera.aspect) * 1.45);
+  const distance = 16.5 * fit / zoom;
+  camera.position.set(Math.sin(.85) * distance, 6.8 * fit / zoom, Math.cos(.85) * distance);
   camera.lookAt(0, 2.2, 0);
 };
 
